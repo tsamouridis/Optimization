@@ -30,7 +30,7 @@ function [interval, a, b, k, times_f_is_calculated] = fibonacci_method(f, a1, b1
 %             x2(n) = x2(n-1);
             if subs(f, x1(n-2)) > subs(f, x2(n-2))
                 a(n-1) = x1(n-2);
-                b(n-1) = b(n-1);
+                b(n-1) = b(n-2);
             else
                 a(n-1) = a(n-2);
                 b(n-1) = x2(n-2);

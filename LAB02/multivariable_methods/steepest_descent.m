@@ -6,7 +6,10 @@ function [x_star, k, x_k, y_k] = steepest_descent(f, x1, y1, gamma, epsilon)
     k = max_num_of_iterations;
     x_k = x1;
     y_k = y1;
+    fcontour(f)
     for i = 1:max_num_of_iterations
+        hold on
+        plot(x_k, y_k)
         if norm(f_derivative(x_k(i), y_k(i))) < epsilon
             x_star = [x_k(i), y_k(i)];
             k = i;
