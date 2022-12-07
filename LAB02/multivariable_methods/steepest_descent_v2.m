@@ -4,7 +4,6 @@ function [x_star, k, x_k, y_k, gamma_k] = steepest_descent_v2(f, x1, y1, epsilon
     syms sym_gamma;
     f_derivative = jacobian(f);
     max_num_of_iterations = 1000;
-    k = max_num_of_iterations;
     x_k = x1;
     y_k = y1;
     

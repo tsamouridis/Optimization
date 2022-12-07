@@ -3,7 +3,6 @@
 function [x_star, k, x_k, y_k] = steepest_descent(f, x1, y1, gamma, epsilon)
     f_derivative = jacobian(f);
     max_num_of_iterations = 1000;
-    k = max_num_of_iterations;
     x_k = x1;
     y_k = y1;
     fcontour(f)
