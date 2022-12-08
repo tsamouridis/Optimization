@@ -1,6 +1,6 @@
 function m_k = calculate_m_k(f_hessian, x, y)
     step = 0.01;
-    m_k = 0;  % if m_k = 0, we get the Newton method
+    m_k = 0;  % if m_k = 0, Newton method is obtained
     I = diag([1,1]);
     array = f_hessian(x,y) + m_k*I;
     while ~is_positive_definite(array)
