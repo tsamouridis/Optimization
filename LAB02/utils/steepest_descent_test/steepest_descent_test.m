@@ -6,9 +6,9 @@ epsilon = 0.001;
 
 % comment out the unwanted starting points and keep one of the 3 following 
 % lines to get the desired results:
-% x1 = 0; y1 = 0;
+x1 = 0; y1 = 0;
 % x1 = -1; y1 = 1;
-x1 = 1; y1 = -1;
+% x1 = 1; y1 = -1;
 
 figure;
 for i = 1:length(gamma)

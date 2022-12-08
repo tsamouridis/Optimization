@@ -2,6 +2,8 @@ clear variables; close all;
 
 load_function
 epsilon = 0.001;
+check_hessian = false;
+
 
 % comment out the unwanted starting points and keep one of the 3 following 
 % lines to get the desired results:
@@ -10,7 +12,7 @@ x1 = -1; y1 = 1;
 % x1 = 1; y1 = -1;
 
 figure;
-[x_star, k, x_k, y_k, gamma_k] = newton_v2(f, x1, y1, epsilon, false);
+[x_star, k, x_k, y_k, gamma_k] = newton_v2(f, x1, y1, epsilon, check_hessian);
 fcontour(f, [-2.5, 2.5, -2.5, 2.5]);
 hold on;
 plot(x_k, y_k)

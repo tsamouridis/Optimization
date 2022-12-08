@@ -3,16 +3,17 @@ clear variables; close all;
 load_function
 gamma = [0.01, 0.1, 1, 2];
 epsilon = 0.001;
+check_hessian = false;
 
 % comment out the unwanted starting points and keep one of the 3 following 
 % lines to get the desired results:
 % x1 = 0; y1 = 0;
-% x1 = -1; y1 = 1;
-x1 = 1; y1 = -1;
+x1 = -1; y1 = 1;
+% x1 = 1; y1 = -1;
 
 figure;
 for i = 1:length(gamma)
-    [x_star, k, x_k, y_k] = newton(f, x1, y1, gamma(i), epsilon, true);
+    [x_star, k, x_k, y_k] = newton(f, x1, y1, gamma(i), epsilon, check_hessian);
     subplot(2, 2, i)
     fcontour(f, [-2.5, 2.5, -2.5, 2.5]);
     hold on;

@@ -2,7 +2,6 @@ clear variables; close all;
 
 load_function
 epsilon = 0.001;
-
 % comment out the unwanted starting points and keep one of the 3 following 
 % lines to get the desired results:
 % x1 = 0; y1 = 0;
