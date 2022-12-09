@@ -14,7 +14,7 @@
 % In this implementation gamma is chosen by the Armijo Rule.
 % The Hessian array must be positive definite in order for the Armijo Rule
 % to work properly.
-function [min_point, k, x, y, gamma] = newton_v3(f, x1, y1, epsilon)
+function [min_point, k, x, y, gamma] = newton_v3(f, x1, y1, epsilon, alpha, beta, s)
     f_jacobian = (jacobian(f))';
     f_hessian = hessian(f);
     MAX_K = 1000;  % maximum number of iterations
@@ -31,7 +31,7 @@ function [min_point, k, x, y, gamma] = newton_v3(f, x1, y1, epsilon)
                 error('Hessian is not positive definite')
             end
             d = - inv(A) * f_jacobian(x(k), y(k));
-            [gamma(k+1), x(k+1), y(k+1)] = armijo(f, f_jacobian, x(k), y(k), d);
+            [gamma(k), x(k+1), y(k+1)] = armijo(f, f_jacobian, x(k), y(k), d, alpha, beta, s);
         end
     end
     min_point = nan;

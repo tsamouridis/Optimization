@@ -19,14 +19,12 @@ function [min_point, k, x, y, gamma, m_k] = levenberg_marquardt_v2(f, x1, y1, ep
     f_derivative = jacobian(f)';
     f_second_derivative = hessian(f);
     I = diag([1,1]);
+    gamma = nan;
  
     MAX_K = 1000;   % maximum number of iterations
     x = x1;
     y = y1;
-    fcontour(f)
     for k = 1:MAX_K
-        hold on
-        plot(x, y)
         if norm(f_derivative(x(k), y(k))) < epsilon
             min_point = [x(k), y(k)];
             return;

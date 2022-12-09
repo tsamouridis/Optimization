@@ -1,4 +1,4 @@
-% loads the parameters and the function
+% loads the function f
 syms x
 syms y
 

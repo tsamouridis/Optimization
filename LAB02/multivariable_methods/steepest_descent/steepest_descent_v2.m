@@ -20,7 +20,7 @@ function [min_point, k, x, y, gamma] = steepest_descent_v2(f, x1, y1, epsilon)
     MAX_K = 1000;  % maximum number of iterations
     x = x1;
     y = y1;
-
+    gamma = nan;
     for k = 1:MAX_K
         if norm(f_derivative(x(k), y(k))) < epsilon
             min_point = [x(k), y(k)];
