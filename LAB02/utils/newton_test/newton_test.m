@@ -7,13 +7,13 @@ clear variables; close all; clc;
 load_function
 gamma = [0.01, 0.1, 1, 2];
 epsilon = 0.001;
-check_hessian = false;
+check_hessian = true;
 
 % Comment out the unwanted starting points and keep one of the 3 following 
 % lines to get the desired results:
 % x1 = 0; y1 = 0;
-x1 = -1; y1 = 1;
-% x1 = 1; y1 = -1;
+% x1 = -1; y1 = 1;
+x1 = 1; y1 = -1;
 
 figure;
 sgtitle('Newton algorithm for constant \gamma')

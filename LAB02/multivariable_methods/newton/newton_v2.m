@@ -13,7 +13,7 @@
 %   gamma: the values of gamma in each iteration
 % In this implementation gamma is chosen by the minimization in respect to
 % gamma of the expression: phi(gamma) = f(x_k + gamma_k*d_k)
-function [min_point, k, x, y, gamma] = newton_v2(f, x1, y1, epsilon, check_hessian)
+function [min_point, k, x, y, gamma] = newton_v2(f, x1, y1, epsilon)
     syms sym_gamma; %symbolic gamma, used for the minimization of the pfi(gamma)
     f_jacobian = (jacobian(f))';
     f_hessian = hessian(f);

@@ -12,14 +12,14 @@ epsilon = 0.001;
 % Comment out the unwanted parameters and keep one of the 2 following 
 % lines to get the desired results:
 % alpha = 0.001; beta = 0.2; s = 1; flag = 1;
-% alpha = 0.01; beta = 0.5; s = 0.3; flag = 2;
-alpha = 0.001; beta = 0.5; s = 1; flag = 3;
+alpha = 0.01; beta = 0.5; s = 0.3; flag = 2;
+% alpha = 0.001; beta = 0.5; s = 1; flag = 3;
 
 % Comment out the unwanted starting points and keep one of the 3 following 
 % lines to get the desired results:
 % x1 = 0; y1 = 0;
-x1 = -1; y1 = 1;
-% x1 = 1; y1 = -1;
+% x1 = -1; y1 = 1;
+x1 = 1; y1 = -1;
 
 figure;
 temp_sgtitle = sprintf('case %d', flag);

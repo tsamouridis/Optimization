@@ -1,4 +1,4 @@
-% plots the function f
+% plots the function f(x,y)
 clear variables; close all;
 
 load_function

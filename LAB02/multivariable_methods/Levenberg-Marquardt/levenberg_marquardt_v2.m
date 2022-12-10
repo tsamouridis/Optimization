@@ -31,7 +31,7 @@ function [min_point, k, x, y, gamma, m_k] = levenberg_marquardt_v2(f, x1, y1, ep
         else
             m_k(k) = calculate_m_k(f_second_derivative, x(k), y(k)); 
             d = - inv( f_second_derivative(x(k),y(k)) + m_k(k)*I) * f_derivative(x(k), y(k));
-            
+            norm(d)
             phi = f( x(k) + sym_gamma*d(1), y(k) + sym_gamma*d(2) );
             gamma(k) = mean(goldenSection_method(phi, 0, 3, 0.0001));
             
