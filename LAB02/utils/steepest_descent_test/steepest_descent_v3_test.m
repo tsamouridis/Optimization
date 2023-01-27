@@ -34,7 +34,7 @@ ylabel('y')
 plot(x_k(1), y_k(1), 'o', 'color', 'red')
 plot(x_k(end), y_k(end), 'x', 'color', 'red')
 legend('', 'Path', 'Starting point', 'Point of minimum')
-temp_title = sprintf('Steepest Descent algorithm with Armijo Rule, case %d', flag);
+temp_title = sprintf('Steepest Descent algorithm with Armijo Rule');
 title(temp_title)
 grid on;
 fprintf('There is(are) %d iteration(s).\n', k)
